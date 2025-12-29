@@ -2,20 +2,23 @@
   HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
 
-
-body, div, main, section, article {
-  box-sizing: border-box; 
+body,
+div,
+main,
+section,
+article {
+  box-sizing: border-box;
 }
 
 /* universal background color */
 body {
-  background-color: #DA5437; 
+  background-color: #000000;
 }
 
 /* header image */
 header img {
   width: 500px;
-  max-width: 98%;
+  max-width: 40%;
 }
 
 /* clearfix hack to prevent image overflow. check out the W3Schools page on it. */
@@ -28,13 +31,22 @@ header img {
 /*FONTS*/
 
 /* header font */
-#showComic, header, h1, h2, h3, h4, h5 {
-  font-family: 'Cherry Cream Soda', cursive;
+#showComic,
+header,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Cherry Cream Soda", cursive;
 }
 
 /* body font */
-.subPage p, footer, #authorNotes, .archiveTable {
-  font-family: 'Open Sans', sans-serif;
+.subPage p,
+footer,
+#authorNotes,
+.archiveTable {
+  font-family: "Open Sans", sans-serif;
   font-size: large;
 }
 
@@ -59,30 +71,31 @@ header img {
 /* for pictures displayed to the left */
 .leftPic {
   clear: left;
-  float:right;
-  margin-left:20px;
+  float: right;
+  margin-left: 20px;
 }
 
 /* for pictures displayed to the left */
 .rightPic {
   clear: right;
-  float:left;
-  margin-left:20px;
+  float: left;
+  margin-left: 20px;
 }
 
 /* specific to Characters */
-.charTable, .charTable td { 
+.charTable,
+.charTable td {
   width: 100%;
 }
 
 /* link colors */
 a {
-      color: #000000;
-    }
+  color: #ff4d4d;
+}
 
 a:hover {
-      color: #DA5437;
-    }
+  color: #da5437;
+}
 
 /* HEADER */
 header #nav {
@@ -117,7 +130,7 @@ header #nav {
 
 /* style author notes */
 #authorNotes {
-  background-color:#ffffff;
+  background-color: #ffffff;
   outline: 3px solid #000000;
   margin: auto;
   padding: 3px;
@@ -131,14 +144,13 @@ header #nav {
 /* style table in which archive is displayed */
 .archiveTable {
   width: 90%;
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
 
 /* style archive table cells */
 .archiveTable td {
   padding: 3px;
   vertical-align: center;
-  
 }
 
 /* style table cell in which page title is displayed */
@@ -159,12 +171,12 @@ header #nav {
 
 /* style the thumbnails on the archive page */
 .archiveCellThumb {
-    width: 500px;
-    max-width: 60px;
+  width: 500px;
+  max-width: 60px;
 }
-.archiveCellThumb img{
-    max-width: 100%;
-  }
+.archiveCellThumb img {
+  max-width: 100%;
+}
 
 /* for left aligning the text in a table cell */
 .leftAlignTableText td {
@@ -173,7 +185,7 @@ header #nav {
 
 /* highlight a table row and make pointer into hand when moused over */
 .archiveRow:hover {
-  background-color: #DA5437;
+  background-color: #da5437;
   cursor: pointer;
 }
 
@@ -192,15 +204,15 @@ footer p {
 }
 
 footer a {
-  color: #c8d32b
+  color: #c8d32b;
 }
 
 footer a:hover {
-  color: #868d26
+  color: #868d26;
 }
 
 /* take away margins from the edges of the screen */
-html, body {
+html,
+body {
   margin: 0;
 }
-
