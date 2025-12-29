@@ -1,0 +1,101 @@
+
+*
+ * =============================================
+ * BELLS WEBCOMIC – MAIN STYLESHEET
+ * =============================================
+ * Author: Andy Poystila
+ * Version: 2.1 | Last Updated: April 13, 2025
+ * License: GNU General Public License v3.0 (GPL-3.0)
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ * 
+ * CONTENTS:                    DESIGN SYSTEM:
+ * 1. Base Styles               - Comprehensive color & font theming 🎨
+ * 2. Typography                - Mobile-first responsive architecture 📱
+ * 3. Layout Components
+ * 4. Page Templates
+ * 5. Responsive Breakpoints
+ * =============================================
+ */
+
+/* 
+███████  ██████  ███    ██ ████████ ███████ 
+██      ██    ██ ████   ██    ██    ██      
+█████   ██    ██ ██ ██  ██    ██    ███████ 
+██      ██    ██ ██  ██ ██    ██         ██ 
+██       ██████  ██   ████    ██    ███████ 
+*/
+
+/* Bells Custom Font */
+
+font-family: "bellsCustomFont";
+src: url("files/fonts/bellscustomfont-webfont.woff2") format("woff2"),
+  url("files/fonts/bellscustomfont-webfont.woff") format("woff")
+    url("/files/fonts/bellscustomfont.otf") format("otf");
+font-weight: normal;
+font-style: normal;
+
+@import url("fonts/bellsfont-Regular.otf");
+
+.bellsfont {
+  font-family: "bellsCustomFont", monospace;
+  font-weight: normal;
+font-style: normal;
+}
+
+/* 
+██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████ 
+██    ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██      ██      
+██    ██ ███████ ██████  ██ ███████ ██████  ██      █████   ███████ 
+ ██  ██  ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██           ██ 
+  ████   ██   ██ ██   ██ ██ ██   ██ ██████  ███████ ███████ ███████ 
+*/
+
+/* ------------------------------- */
+/* 🎨 Theme Design Variables */
+/* Use CSS variables to quickly change your site's color scheme and typography */
+/* ------------------------------- */
+
+/* These design variables store important elements like colours and fonts.
+   You can easily change the look and feel of your site by adjusting these values. */
+
+/* TODO: Customize these variables to fit your design. You can add new ones or delete ones you don’t need. */
+
+:root {
+  /* Typography */
+  --font-family-body: "Anonymous Pro", monospace;
+  --font-family-heading: "Anonymous Pro", monospace;
+  --font-family-project-title: "Anonymous Pro", monospace;
+  /* Core Colours */
+  --color-text-primary: #cbdebf;
+  --color-text-secondary: #cbdebf;
+  --color-accent-primary: #5bbc1a;
+  --color-accent-secondary: #cbdebf;
+  --color-overlay-primary: #cbdebf;
+
+  /* Backgrounds */
+  --color-bg: #080808;
+  /* 
+
+███████  ██████   ██████  ████████ ███████ ██████  
+██      ██    ██ ██    ██    ██    ██      ██   ██ 
+█████   ██    ██ ██    ██    ██    █████   ██████  
+██      ██    ██ ██    ██    ██    ██      ██   ██ 
+██       ██████   ██████     ██    ███████ ██   ██ 
+                                                   
+*/
+
+/* -------------------------------------------------------------------------- */
+/* 📱 MOBILE FOOTER LAYOUT                                                    */
+/* Designed with mobile-first approach using CSS Grid                          */
+/* -------------------------------------------------------------------------- */
+
+.footer-global {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  grid-gap: 3rem; /* Consistent spacing between sections */
+  min-height: auto; /* Allows footer to expand based on content, no fixed height */
+  background: var(--color-bg-footer); /* Using CSS variable for theming */
+  padding: var(--padding-small); /* Internal spacing */
+
+  /* Note: Using 'fr' units ensures proper scaling across devices */
+}

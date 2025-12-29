@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    
+    
+     <!-- To do List:
+     
+     Colours:
+    Change foreground clr to white,
+    Add border?
+    Change Font, change font clr,
+     Change the nav:
+    Add Website direct, https://www.bellswhite.com/
+    Remove some tags, 
+    Remove +,
+    
+    Footer: 
+    Remove Comicfury Logo,
+    
+    -->
+    
+    
+        <!-- Last Update: [v:lastupdatedmy] -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+        <meta name="robots" content="noai, noimageai">
+        <meta name="description" content="Lucien">
+        <meta name="keywords" content="bells, Bells White, bells webcomic, skelebells lucien, skelebells, Lucien">
+        <meta name="author" content="Bells White">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        [c:iscomicrelatedpage]
+            [c:!isfirstcomic]
+                <link rel="prev" href="[v:prevcomic]" />
+            [/]
+
+            [c:!islastcomic]
+                <link rel="next" href="[v:nextcomic]" />
+            [/]
+
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="[v:webcomicname]" />
+            <meta property="og:description" content="[v:pagetitle]" />
+            [c:iscomicpage]
+                <meta property="og:url" content="[v:permalink]" />
+            [/]
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="[v:webcomicname]" />
+            <meta name="twitter:description" content="[v:pagetitle]" />
+
+            [c:previewimageurl]
+                <meta property="og:image" content="[v:previewimageurl]" />
+                <meta property="og:image:width" content="[v:previewimagewidth]" />
+                <meta property="og:image:height" content="[v:previewimageheight]" />
+                <meta name="twitter:image" content="[v:previewimageurl]" />
+            [/]
+        [/]
+
+
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/" />
+
+        <title>[v:webcomictitle] - [v:pagetitle]</title>
+
+        <link type="text/css" rel="stylesheet" href="https://comicfury.com/images/layouts/bluemonday/jquery.dropdown.css" />
+        [v:layoutcss]
+
+        <link href="https://comicfury.com/images/layouts/bluemonday/titillium-web.css" rel="stylesheet">
+        <link href="https://comicfury.com/images/layouts/bluemonday/londrina-solid.css" rel="stylesheet">
+        <link href="https://comicfury.com/images/layouts/bluemonday/londrina-shadow.css" rel="stylesheet">
+        <script type="text/javascript" src="https://comicfury.com/scripts/vendor/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="https://comicfury.com/images/layouts/bluemonday/jquery.dropdown.js"></script>
+
+
+        [v:cfscriptcode]
+
+        [c:iscomicrelatedpage]
+            <script type="text/javascript">
+                activateKeyboardNavigation("[v:prevcomicjs]#content-start", "[v:nextcomicjs]#content-start", "ArrowLeft", "ArrowRight");
+            </script>
+        [/]
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(e) {
+                //this checks if the current visitor has a place saved already, and if not, add the "loadplace-inactive" class
+                //to the "load my place" link, to gray it out
+                var loadPlaceLink = document.getElementById('loadplace-link');
+                if(loadPlaceLink !== null && !comicfury.bookmark)
+                {
+                    loadPlaceLink.classList.add('loadplace-inactive');
+                }
+            });
+
+            var customOnSave = function(saveLink) {
+                //this adds the class "saveplace-saved" class to the "save my place" link, when the bookmark has been saved
+                //you can also overwrite saveLink.innerHTML instead with new HTML code to e.g. change the image
+                saveLink.classList.add('saveplace-saved');
+            };
+        </script>
+    </head>
+    
+    <body style="background-color:black;" >
+        <header>
+         
+        <img src="https://comicfury.com/comicbans/389/73621_1951049947.jpg" alt="Lucien">
+        </img>
+        
+            <nav class="custom-nav">
+                <ul style="color:white;" >
+                    <li><a style="color:white;" href="/">Home</a></li>
+                    <li><a  style="color:white;"href="/archive/">Archive</a></li>
+
+                    [c:infinitescrollenabled]
+                        <li><a  style="color:white;" href="[v:infinitescrolllink]">Scroll View</a></li>
+                    [/]
+
+                    <li><a  style="color:white;" href="/comics/">Comics</a></li>
+
+                    [c:hasblogs]
+                        <li><a  style="color:white;" href="/blog/">Blog</a></li>
+                    [/]
+                    
+                
+                        <li><a  style="color:white;"target="blank" href="https://www.bellswhite.com/">Site</a></li>
+                  
+
+                    [l:extrapages]
+                        <li><a  style="color:white;" href="[v:l.link]">[v:l.title]</a></li>
+                    [/]
+
+                    [c:!hidefromhost]
+                        <li><a  style="color:white;" href="[v:addsubscriptionlink]" target="window2">Subscribe</a></li>
+                    [/]
+                </ul>
+            </nav>
+        </header>
+
+        [c:isextrapage]
+            <section>
+                <article>
+	                <h2>[v:pagetitle]</h2>
+	                <div class="extrapagecontent">
+        [/]
+
+        <!--layout:[content]-->
+
+        [c:isextrapage]
+                        <div class="clear"></div>
+                    </div>
+                </article>
+            </section>
+        [/]
+
+        <footer class="center">
+           
+
+            <div class="hostedby"  style="color:white;">
+                <span style="color:white;" >Hosted by </span>
+                <a href="https://comicfury.com" style="color:grey;">
+                    <img src="https://comicfury.com/images/gator-icon-white.png" height="20" style="height:20px; width:auto;" />
+                    ComicFury
+                </a>
+            </div>
+
+            <div  style="color:white;" >
+                Lucien by <a href="https://www.bellswhite.com/" style="color:grey;">Bells White</a> 2022-2025 - All Rights Reserved.
+                | Design by <a href="https://comicfury.com/profile.php?username=cutething" style="color:grey;">cutething</a>
+            </div>
+        </footer>
+    </body>
+</html>
