@@ -1,46 +1,49 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
     <title>Home | Skelebells/Bells White Comics</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-   
-  <!-- Global Bells Custom Font  -->
-      <style>
-    @font-face {
-  font-family: "bellsCustomFont";
-  src: url("assets/fonts/bellscustomfont-webfont.woff2") format("woff2"),
-    url("assets/fonts/bellscustomfont-webfont.woff") format("woff")
-      url("assets/fonts/bellscustomfont.otf") format("otf");
-  font-weight: normal;
-  font-style: normal; 
-    }
-    </style>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
+    <!-- Global Bells Custom Font -->
+    <style>
+      @font-face {
+        font-family: "bellsCustomFont";
+        src: url("assets/fonts/bellscustomfont-webfont.woff2") format("woff2"),
+          url("assets/fonts/bellscustomfont-webfont.woff") format("woff"),
+          url("assets/fonts/bellscustomfont.otf") format("otf");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
   </head>
   <body>
+    <!-- most of the elements on these pages are defined in the js files as functions, then we tell these functions where to show up on the page by placing empty divs and naming those divs the name of the js functions. check the js files to edit these elements in more detail.-->
 
-  <!-- most of the elements on these pages are defined in the js files as functions, then we tell these functions where to show up on the page by placing empty divs and naming those divs the name of the js functions. check the js files to edit these elements in more detail.-->
+    <nav class="writeNav"></nav>
 
-  <div align="center">
-    <!-- header that has the logo image and top page navigation. don't forget to put this on every page -->
-    <nav class="index-nav">
-      <ul>
-       <li> <a href="/lucien_pg001.html">lucien</a></li>
-        <li> <a href="/potentia_pg001.html">potentia</a></li>
-         <li> <a href="/dedc_pg001.html">deadend.com</a></li>
-      </ul>
-    </nav>
-  </div>
-  
+    <main class="page-wrapper">
+      <!-- header that has the logo image and top page navigation. don't forget to put this on every page -->
+      <div>
+        <ul>
+          <li><a href="/lucien_pg001.html">lucien</a></li>
+          <li><a href="/potentia_pg001.html">potentia</a></li>
+          <li><a href="/dedc_pg001.html">deadend.com</a></li>
+        </ul>
+      </div>
+    </main>
 
-<!-- footer that has a link back to rarebit, and ideally has copyright info and stuff. again, don't forget to put this on every page-->
-<div class="writeFooter">
-</div>
+    <!-- footer that has a link back to rarebit, and ideally has copyright info and stuff. again, don't forget to put this on every page-->
+    <div class="writeFooter"></div>
 
-  <!-- really important- every js script is called here, be sure to always put them just before the closing body tag, use a defer attribute, and call them in this specific order.-->
+    <!-- really important- every js script is called here, be sure to always put them just before the closing body tag, use a defer attribute, and call them in this specific order.-->
     <script src="js/comic_settings.js" defer></script>
     <script src="js/comic_show.js" defer></script>
-    <script src="js/comic_header.js" defer></script>
-    <script src="js/comic_footer.js" defer></script>
+    <script src="js/global_header.js" defer></script>
+    <script src="js/global_footer.js" defer></script>
   </body>
 </html>
