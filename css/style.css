@@ -7,7 +7,7 @@
  * https://www.gnu.org/licenses/gpl-3.0.en.html
  * 
  * CONTENTS:                    DESIGN SYSTEM:
- * 1. Root Styles               - Comprehensive color & font theming 🎨
+ * 1. Base Style Colours        - Comprehensive color & font theming 🎨
  * 2. Typography                - Mobile-first responsive architecture 📱
  * 3. Home Page
  * 4. Page Templates
@@ -16,12 +16,12 @@
  */
 
 /*=============================================
-= 1. BASE STYLES
+= 1. BASE STYLE COLOURS
 ==============================================*/
 :root {
-  --font-family-body: "Inter", sans-serif;
-  --font-family-heading: "Eczar", serif;
-  --font-family-project-title: "Eczar", serif;
+  --font-family-body: "bellsCustomFont", sans-serif, Lower;
+  --font-family-heading: "bellsCustomFont", sans-serif;
+  --font-family-project-title: "bellsCustomFont", sans-serif;
   --color-text-primary: #222;
   --color-text-secondary: #333;
   --color-accent-primary: #5200ff;
@@ -69,7 +69,6 @@
   --color-text-holding-footer: #f8f8ff;
   --color-bg-selection: #5200ff;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
-  --image-noise-texture: url(/assets/temp/noise.svg);
   --duration-fast: 0.15s;
   --duration-normal: 0.3s;
   --duration-slow: 0.75s;
@@ -103,6 +102,8 @@
 = 2. TYPOGRAPHY
 ==============================================*/
 
+/* DISCLAIMER - The Bells Font is Lower Case only, no Upper Case Glyphs*/
+
 @font-face {
   font-family: "bellsCustomFont";
   src: url("assets/fonts/bellscustomfont-webfont.woff2") format("woff2"),
@@ -110,12 +111,22 @@
       url("assets/fonts/bellscustomfont.otf") format("otf");
   font-weight: normal;
   font-style: normal;
+  text-transform: lowercase;
 }
 
 body {
-  font-family: "bellsCustomFont";
+  font-family: "bellsCustomFont", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
+  text-transform: lowercase;
+}
+
+a {
+  font-family: "bellsCustomFont", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2rem;
+  text-transform: lowercase;
 }
 
 h1,
@@ -124,7 +135,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "bellsCustomFont";
+  font-family: var(--font-family-body), sans-serif;
   font-weight: normal;
   font-style: normal;
+  text-transform: lowercase;
 }
