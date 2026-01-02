@@ -114,10 +114,15 @@
   text-transform: lowercase;
 }
 
+* {
+  font-family: "bellsCustomFont", Helvetica, Arial, sans-serif !important;
+}
+
 body {
   font-family: "bellsCustomFont", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
+  font-size: medium;
   text-transform: lowercase;
 }
 
@@ -125,7 +130,6 @@ a {
   font-family: "bellsCustomFont", sans-serif;
   font-weight: normal;
   font-style: normal;
-  font-size: 2rem;
   text-transform: lowercase;
 }
 
@@ -138,5 +142,6 @@ h6 {
   font-family: var(--font-family-body), sans-serif;
   font-weight: normal;
   font-style: normal;
+  font-size: large;
   text-transform: lowercase;
 }

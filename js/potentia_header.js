@@ -9,7 +9,7 @@ document.querySelector(".potentia_header").innerHTML = `
         <div id="nav">
             <a href="index.html">home</a> |
             <a href="archive.html">archive</a> |
-            <a href="about.html">about</a> |
+  
             <a href="characters.html">characters</a>
         </div>
     </header>

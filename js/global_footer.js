@@ -2,7 +2,7 @@
 //at the bottom of your page, but before the js script calls and the closing body tag, put an empty div with a class of "writeFooter"
 document.querySelector(".writeFooter").innerHTML = `
     <footer align="center">
-        <p> © Skelebells 2026-27
-        with help from <a href="https://rarebit.neocities.org">Rarebit</a></p>
+        <p> © skelebells 2026-27
+        with help from <a href="https://rarebit.neocities.org">rarebit</a></p>
     </footer>
 `;
