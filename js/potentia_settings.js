@@ -1,3 +1,5 @@
+// POTENTIA
+
 //comic_settings.js was created by geno7, with much needed assistance from Dannarchy
 
 //this is the main file you'll be messing with to manage and update your comic. most (not all) of the main toggle-able settings are here.
@@ -11,14 +13,14 @@ let pg = Number(findGetParameter("pg")); //make "pg" mean the current page numbe
 ////////////////////////
 
 //REALLY IMPORTANT ONES
-const maxpg = 14; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files.
+const maxpg = 89; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files.
 //YOU MUST UPDATE THIS NUMBER EVERY TIME YOU ADD A NEW PAGE or else it wont display the most recent page
 
 // COMIC PAGE SETTINGS
-const folder = "img/comics"; //directory of the folder where you keep all the comics
-const image = "pg"; //what you'll name all your comic pages
-const imgPart = "_"; //special character(s) you put after the page number to subdivide pages into multiple image files (ie pg2_1, pg2_2, etc)
-const ext = "jpg"; //file extension of your comic pages
+const folder = "img/potentia_comic"; //directory of the folder where you keep all the comics
+const image = "potentia"; //what you'll name all your comic pages
+const imgPart = "_00"; //special character(s) you put after the page number to subdivide pages into multiple image files (ie pg2_1, pg2_2, etc)
+const ext = ".jpeg"; //file extension of your comic pages
 
 //THUMBNAIL SETTINGS
 const thumbFolder = "img/thumbs"; //directory of the folder where you keep all the thumbnail images for the comics, in case you want the archive page to use thumbnails.
@@ -26,13 +28,13 @@ const thumbExt = "png"; //file extension of thumbnails
 const thumbDefault = "default"; //name of the default thumbnail that displays when no thumbnail is set, located in the directory you set thumbFolder to.
 
 //NAVIGATION SETTINGS
-const navText = ["First", "Previous", "Next", "Last"]; //alt text for your nav images, or just the text that shows up if you're not using images
+const navText = ["first", "previous", "next", "last"]; //alt text for your nav images, or just the text that shows up if you're not using images
 const navFolder = "img/comicnav"; //directory where nav images are stored
-const navExt = "png"; //file extension of nav images
+const navExt = ".png"; //file extension of nav images
 const navScrollTo = "#showComic"; //id of the div you want the page to automatically scroll to when you click to the next comic. will turn off if you delete text between quotation marks
 
 if (pg == 0) {
-  pg = maxpg;
+  pg = 1;
 } //display MOST RECENT COMIC when the webpage is loaded. if you want to instead have the FIRST COMIC displayed first, change maxpg to 1.
 
 //pgData holds all the parameters for each of your pages. copypaste this and fill out accordingly:
@@ -51,8 +53,8 @@ if (pg == 0) {
 const pgData = [
   {
     pgNum: 1, //what page number it is
-    title: "The First Page Title", //the title of the page (leaving this blank will default it to "Page X")
-    date: writeDate(2021, 3, 16), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
+    title: "Potentia Page 1", //the title of the page (leaving this blank will default it to "Page X")
+    date: writeDate(2024, 3, 16), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
     altText: "Here's some alt text!", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
     imageFiles: 1, //how many image files this page is split into
     authorNotes: `
@@ -62,10 +64,10 @@ const pgData = [
   },
   {
     pgNum: 2,
-    title: "The Second Page Title",
-    date: writeDate(2021, 3, 17),
+    title: "Potentia Page 2"
+    date: writeDate(2024, 3, 17),
     altText: "Here's some more alt text!",
-    imageFiles: 2,
+    imageFiles: 1,
     authorNotes: `
             <p>You can have different author notes for every page.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate, orci sit amet dignissim eleifend, magna felis malesuada nunc, ut sagittis purus mi ac urna. Fusce ligula urna, varius vel sapien sit amet, vulputate tempor felis. In hac habitasse platea dictumst. Aliquam laoreet volutpat interdum. Vestibulum non libero sit amet leo accumsan porttitor. Vivamus nec porttitor neque. Sed eget mauris quam.</p>

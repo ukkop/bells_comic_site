@@ -168,7 +168,7 @@ function imgOrText(setImg, navTextSet) {
 function writeNav(imageToggle) {
   let writeNavDiv = document.querySelectorAll(".writeNav");
   writeNavDiv.forEach(function (element) {
-    element.innerHTML = `<div class="comicNav">
+    element.innerHTML = `<div class="comicnav">
         ${firstButton()}
         ${divider()}
         ${prevButton()}
