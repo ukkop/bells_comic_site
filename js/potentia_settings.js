@@ -18,9 +18,9 @@ const maxpg = 89; //the current number of pages your comic has in total. this DO
 
 // COMIC PAGE SETTINGS
 const folder = "img/potentia_comic"; //directory of the folder where you keep all the comics
-const image = "potentia_"; //what you'll name all your comic pages
+const image = "pg"; //what you'll name all your comic pages
 const imgPart = ""; //special character(s) you put after the page number to subdivide pages into multiple image files (ie pg2_1, pg2_2, etc)
-const ext = ".jpeg"; //file extension of your comic pages
+const ext = "jpeg"; //file extension of your comic pages
 
 //THUMBNAIL SETTINGS
 const thumbFolder = "img/thumbs"; //directory of the folder where you keep all the thumbnail images for the comics, in case you want the archive page to use thumbnails.
@@ -34,7 +34,7 @@ const navExt = ".png"; //file extension of nav images
 const navScrollTo = "#showComic"; //id of the div you want the page to automatically scroll to when you click to the next comic. will turn off if you delete text between quotation marks
 
 if (pg == 0) {
-  pg = 001;
+  pg = 1;
 } //display MOST RECENT COMIC when the webpage is loaded. if you want to instead have the FIRST COMIC displayed first, change maxpg to 1.
 
 //pgData holds all the parameters for each of your pages. copypaste this and fill out accordingly:
@@ -52,7 +52,7 @@ if (pg == 0) {
 
 const pgData = [
   {
-    pgNum: 001, //what page number it is
+    pgNum: 1, //what page number it is
     title: "", //the title of the page (leaving this blank will default it to "Page X")
     date: writeDate(2024, 3, 16), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
     altText: "Here's some alt text!", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
@@ -63,7 +63,7 @@ const pgData = [
             `,
   },
   {
-    pgNum: 002,
+    pgNum: 2,
     title: "",
     date: writeDate(2024, 3, 17),
     altText: "Here's some more alt text!",
